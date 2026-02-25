@@ -1,4 +1,4 @@
-# Awesome OpenClaw 中文精选（awesome-openclaw-zh）
+# OpenClaw 中文案例精选（awesome-openclaw-zh）
 
 一个面向中文用户的 OpenClaw 实战仓库：
 **先 5 分钟用起来，再不断扩充能力边界。**
