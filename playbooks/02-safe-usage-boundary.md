@@ -18,4 +18,4 @@
 - [技能预检检查器](../usecases/security/34-skill-preflight-checker.md)
 - [技能供应链审计](../usecases/security/31-skill-supply-chain-audit.md)
 - [API 安全测试器](../usecases/security/32-api-security-tester.md)
-- [令牌使用优化器](../usecases/security/27-token-usage-optimizer.md)
+- [Token使用优化](../usecases/security/27-token-usage-optimizer.md)
