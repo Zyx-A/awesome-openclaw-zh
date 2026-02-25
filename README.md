@@ -59,7 +59,7 @@
 
 ## 说明与致谢
 
-本仓库主要来源于团队自用经验，结合互联网公开信息和优秀的GitHub开源仓库：
+本仓库最初是我们团队自己内部分享使用Openclaw的经验，其中许多出自于以下仓库：
 
 - [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases)
 - [digitalknk/openclaw-runbook](https://github.com/digitalknk/openclaw-runbook)

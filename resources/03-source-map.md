@@ -1,6 +1,6 @@
 # 来源映射
 
-本仓库核心内容来源：
+本仓库引用核心内容来源：
 
 1. https://github.com/hesamsheikh/awesome-openclaw-usecases
 2. https://github.com/digitalknk/openclaw-runbook
