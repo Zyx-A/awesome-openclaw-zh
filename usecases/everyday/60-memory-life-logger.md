@@ -2,77 +2,68 @@
 
 > 不再忘记生日、偏好和承诺
 
-## 来源与对齐
+## 这个案例能帮你做什么
 
-- 来源仓库： [EvoLinkAI/awesome-openclaw-usecases-moltbook](https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook)
-- 原始条目： [usecases/60-memory-life-logger.md](https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook/blob/main/usecases/60-memory-life-logger.md)
-- 对齐原则：本页仅使用来源可见信息提炼，不臆造未出现配置
+这个案例适合想快速把「不再忘记生日、偏好和承诺」落地的人。
+你可以先跑一个最小版本，确认有效后再加自动化频率。
 
-## 源头里这个案例是怎么做的
+## 开始前准备
 
-### 场景/痛点（来源提炼）
-- This is perfect for people who value relationships, professionals building client relationships, or anyone who wants to be more thoughtful and attentive in their interactions.
+### 原文提到的技能/工具（保持原文）
+- `/memory/life-memories/follow-ups.json`
+- `/memory/life-memories/master-index.json`
+- `Telegram`
 
-### 核心动作（来源提炼）
-- Before you begin, make sure you have:
-- **Telegram Bot**: For adding memories and searching your knowledge base
-- **Storage Location**: A folder for your long-term memory files
-- **Input Method**: How you'll feed conversations to the agent (manual, forwarded messages, etc.)
-- **Privacy Understanding**: Commitment to only capture information you're allowed to store
-- **Categories**: What types of information you want to track
+### 原文命令片段（保持原文）
 
-### 技能/工具/渠道（来源提炼）
-- Telegram Skill — Receive memory confirmations and search requests
-- [Memory/Notes Skill](https://clawhub.ai/skills/mem) — Store and retrieve memories
-- AI/NLP Skill — Extract important details from text
-- File Storage — Save structured memory files
+- 原文未提供可直接执行的命令片段。
 
-### 风险与边界（来源提炼）
-- 源头未明确列出风险条目，默认采用最小权限与二次确认。
+### 原文提到的调度信息（保持原文）
+- 0 19 * * 0
+- 10:00
+- 7:00
 
-## 快速开始（贴近来源的最小闭环）
+## 推荐使用方式（非技术版）
 
-1. 准备来源里提到的核心输入（账号、渠道、数据源、任务目标）。
-2. 先在单次会话里手动跑通一次，不要直接上全自动。
-3. 结果符合预期后，再增加定时/自动化频率。
+1. 先把渠道连通（例如 Telegram / 飞书 / 邮箱中的一个）。
+2. 复制提示词先手动跑通，确认结果格式符合你的使用习惯。
+3. 再逐步增加自动化频率，避免一开始任务过多难排错。
 
-## 可复制提示词（增强版）
+## 可复制提示词
 
 ```text
-你是我的 OpenClaw 助手，现在执行案例「生活记忆管理」。
+你是我的 OpenClaw 助手，请帮我完成「生活记忆管理」。
 
-目标（来自来源案例）：不再忘记生日、偏好和承诺
-来源关键动作：Before you begin, make sure you have:；**Telegram Bot**: For adding memories and searching your knowledge base；**Storage Location**: A folder for your long-term memory files
-优先工具/渠道：Telegram
-来源节奏信息：10:00；7:00；0 22 * * *；0 9 * * *
+任务目标：不再忘记生日、偏好和承诺
 
-请按下面流程输出并执行：
-1. 先给出“最小可运行版本（MVP）”执行计划（3-5条）
-2. 立刻产出第一版结果（不要只讲思路）
-3. 缺失的信息统一放到“待我补充信息”里，不要中断整体流程
-4. 若涉及高风险操作（删除、外发、改密、生产写操作），先暂停并请求确认
+请按这个顺序执行：
+1. 先给出今天可落地的最小版本（3-5步）。
+2. 直接产出第一版结果，不要只讲思路。
+3. 如果缺少信息，把问题集中放在最后让我一次补全。
+4. 使用我已启用的技能（优先：/memory/life-memories/follow-ups.json、/memory/life-memories/master-index.json、Telegram）。
+5. 涉及高风险动作（删除、外发、改密、生产写操作）先暂停并请求确认。
 
 输出格式：
 ## 今日执行计划
 ## 立即可执行动作
 ## 第一版结果
-## 待我补充信息
-## 风险与边界
+## 我需要补充的信息
+## 风险提醒
 ```
 
-## 可选补充信息（提高效果）
+## 风险与边界
 
-- 你的常用渠道：[Telegram/飞书/微信/邮箱]
-- 你的时区与执行时间：[例如 UTC+8，每天 09:00]
-- 你最在意的结果指标：[例如 节省时间、回复率、发布频次]
+- 涉及高风险动作时需要二次确认后再执行。
+- 接收外部内容时要防提示词注入，先校验再执行。
 
-## 效果检查（非技术版）
+## 使用小贴士
 
-- You'll know this is working when:
-- ✅ You can ask "What do I know about [person]?" and get a helpful summary
-- ✅ You remember birthdays and important dates without Facebook reminders
+- 先确认你已安装对应技能，再复制提示词。
+- 先手动跑通一次，再开自动化。
+- 先用一个渠道验证结果，再扩到多个渠道。
+- 遇到高风险动作（删除/外发/改密）先要求确认。
 
-## 参考来源
+## CITATION
 
-- [EvoLinkAI/awesome-openclaw-usecases-moltbook](https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook)
-- [usecases/60-memory-life-logger.md](https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook/blob/main/usecases/60-memory-life-logger.md)
+- 来源仓库： [EvoLinkAI/awesome-openclaw-usecases-moltbook](https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook)
+- 原始条目： [usecases/60-memory-life-logger.md](https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook/blob/main/usecases/60-memory-life-logger.md)

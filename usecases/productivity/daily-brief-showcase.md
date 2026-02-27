@@ -2,80 +2,79 @@
 
 > 每天自动汇总天气、日程、任务和重点信息，早上一次看完。
 
-## 来源与对齐
+## 这个案例能帮你做什么
 
-- 来源仓库： [digitalknk/openclaw-runbook](https://github.com/digitalknk/openclaw-runbook)
-- 原始条目： [showcases/daily-brief.md](https://github.com/digitalknk/openclaw-runbook/blob/main/showcases/daily-brief.md)
-- 对齐原则：本页仅使用来源可见信息提炼，不臆造未出现配置
+这个案例适合想快速把「每天自动汇总天气、日程、任务和重点信息，早上一次看完。」落地的人。
+你可以先跑一个最小版本，确认有效后再加自动化频率。
 
-## 源头里这个案例是怎么做的
+## 开始前准备
 
-### 场景/痛点（来源提炼）
-- 源头未单列“痛点”段落，可从简介理解该场景目标。
+### 原文提到的技能/工具（保持原文）
+- `cron.jobs`
+- `expr`
+- `Telegram`
+- `Discord`
+- `Slack`
+- `Todoist`
+- `Google Calendar`
+- `cron`
+- `OpenClaw`
 
-### 核心动作（来源提炼）
-- [ ] Weather tool configured (built-in, no API key needed)
-- [ ] Calendar access (Google Calendar, Nextcloud, or CalDAV)
-- [ ] Task manager with API (Todoist, Trello, or file-based)
-- [ ] Delivery channel configured (Telegram bot, Discord, or email)
+### 原文命令片段（保持原文）
 
-### 技能/工具/渠道（来源提炼）
-- Add to your gateway config:
-- weather: {}
-- calendar: {}  # or your specific calendar tool
-- message: {}   # Telegram, Discord, or email
-- **Telegram (most popular):**
-- Deliver to Telegram chat [CHAT_ID].
-- Get chat ID from @userinfobot.
-- **Discord:**
+```bash
+openclaw cron run daily-brief
+export TODOIST_API_TOKEN="your-token"
+```
 
-### 风险与边界（来源提炼）
-- Calendar sync delays are real - don't expect minute-by-minute accuracy
-- Large task lists hit rate limits - filter aggressively
-- Skip empty sections entirely rather than saying "nothing found"
-- No secrets in the prompt
+### 原文提到的调度信息（保持原文）
+- 0 9 * * 1
+- 30 9 * * 6
+- 9:30
+- 7:00
+- 12:00
 
-## 快速开始（贴近来源的最小闭环）
+## 推荐使用方式（非技术版）
 
-1. 准备来源里提到的核心输入（账号、渠道、数据源、任务目标）。
-2. 先在单次会话里手动跑通一次，不要直接上全自动。
-3. 结果符合预期后，再增加定时/自动化频率。
+1. 先把渠道连通（例如 Telegram / 飞书 / 邮箱中的一个）。
+2. 复制提示词先手动跑通，确认结果格式符合你的使用习惯。
+3. 再逐步增加自动化频率，避免一开始任务过多难排错。
 
-## 可复制提示词（增强版）
+## 可复制提示词
 
 ```text
-你是我的 OpenClaw 助手，现在执行案例「社区版每日简报（Daily Brief）」。
+你是我的 OpenClaw 助手，请帮我完成「社区版每日简报（Daily Brief）」。
 
-目标（来自来源案例）：每天自动汇总天气、日程、任务和重点信息，早上一次看完。
-来源关键动作：[ ] Weather tool configured (built-in, no API key needed)；[ ] Calendar access (Google Calendar, Nextcloud, or CalDAV)；[ ] Task manager with API (Todoist, Trello, or file-based)
-优先工具/渠道：cron.jobs、expr、Telegram、Discord、Slack、Todoist、Google Calendar、cron
-来源节奏信息：9:30；7:00；12:00；30 9 * * *；0 7 * * *
+任务目标：每天自动汇总天气、日程、任务和重点信息，早上一次看完。
 
-请按下面流程输出并执行：
-1. 先给出“最小可运行版本（MVP）”执行计划（3-5条）
-2. 立刻产出第一版结果（不要只讲思路）
-3. 缺失的信息统一放到“待我补充信息”里，不要中断整体流程
-4. 若涉及高风险操作（删除、外发、改密、生产写操作），先暂停并请求确认
+请按这个顺序执行：
+1. 先给出今天可落地的最小版本（3-5步）。
+2. 直接产出第一版结果，不要只讲思路。
+3. 如果缺少信息，把问题集中放在最后让我一次补全。
+4. 使用我已启用的技能（优先：cron.jobs、expr、Telegram、Discord、Slack、Todoist）。
+5. 涉及高风险动作（删除、外发、改密、生产写操作）先暂停并请求确认。
 
 输出格式：
 ## 今日执行计划
 ## 立即可执行动作
 ## 第一版结果
-## 待我补充信息
-## 风险与边界
+## 我需要补充的信息
+## 风险提醒
 ```
 
-## 可选补充信息（提高效果）
+## 风险与边界
 
-- 你的常用渠道：[Telegram/飞书/微信/邮箱]
-- 你的时区与执行时间：[例如 UTC+8，每天 09:00]
-- 你最在意的结果指标：[例如 节省时间、回复率、发布频次]
+- 密钥和凭证不要明文写入提示词或仓库文件。
+- 接收外部内容时要防提示词注入，先校验再执行。
 
-## 效果检查（非技术版）
+## 使用小贴士
 
-- 优先检查：是否比手工更快、是否稳定、是否可持续复用。
+- 先确认你已安装对应技能，再复制提示词。
+- 如果要执行命令，先在测试环境验证命令输出。
+- 先手动跑通一次，再开自动化。
+- 先用一个渠道验证结果，再扩到多个渠道。
 
-## 参考来源
+## CITATION
 
-- [digitalknk/openclaw-runbook](https://github.com/digitalknk/openclaw-runbook)
-- [showcases/daily-brief.md](https://github.com/digitalknk/openclaw-runbook/blob/main/showcases/daily-brief.md)
+- 来源仓库： [digitalknk/openclaw-runbook](https://github.com/digitalknk/openclaw-runbook)
+- 原始条目： [showcases/daily-brief.md](https://github.com/digitalknk/openclaw-runbook/blob/main/showcases/daily-brief.md)
