@@ -53,11 +53,6 @@
 - [低成本稳定运行（精简版）](./playbooks/01-low-cost-stable-run.md)
 - [安全与权限边界（非技术版）](./playbooks/02-safe-usage-boundary.md)
 
-## 质量与对齐
-
-- [10个案例差异分析（来源 vs 模板）](./resources/06-gap-analysis-10-cases.md)
-- [案例模板（增强版）](./usecases/TEMPLATE.md)
-
 ## 投稿与共建
 
 - [贡献指南](./CONTRIBUTING.md)
