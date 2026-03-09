@@ -29,6 +29,12 @@
 - 用 Windows：看 [Windows 部署（WSL2 主线）](./deploy/02-windows.md)
 - 想 24 小时在线：看 [Linux VPS 通用部署](./deploy/03-linux-vps-baseline.md)
 
+### 推荐渠道入口
+
+- 飞书接入对话（待补）
+- [企业微信接入对话](./channels/01-wecom-intelligent-bot.md)
+- 钉钉接入对话（待补）
+
 ## 你可以先从这 10 个案例开始尝试
 
 - [每日晨间简报](./usecases/everyday/52-morning-briefing-telegram.md)
