@@ -21,7 +21,7 @@
 
 ## 建议阅读顺序
 
-1. 先完成 [部署与安装中心](../deploy/README.md)
+1. 先完成 [部署与配置中心](../deploy/README.md)
 2. 再选择 1 个渠道接入
 3. 跑通第一个真实对话或推送
 4. 回到 [5分钟快速上手](../quickstart/00-5min-quickstart.md)

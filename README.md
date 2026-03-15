@@ -5,7 +5,7 @@
 
 本仓库当前覆盖三类核心内容：
 
-- 部署安装：Mac、Windows、Linux VPS
+- 部署与配置：Mac、Windows、Linux VPS、多 Agent
 - 渠道接入：飞书、钉钉、企业微信、QQ（持续补充）
 - 使用场景：176 个真实案例与工作流
 
@@ -13,7 +13,7 @@
 
 ### 还没部署
 
-1. [部署与安装中心](./deploy/README.md)
+1. [部署与配置中心](./deploy/README.md)
 2. [部署后 5 分钟快速体验](./quickstart/00-5min-quickstart.md)
 3. [7 天上手路径](./quickstart/01-7day-path.md)
 
@@ -28,6 +28,7 @@
 - 有 Mac：看 [macOS 本地部署](./deploy/01-macos-local.md)
 - 用 Windows：看 [Windows 部署（WSL2 主线）](./deploy/02-windows.md)
 - 想 24 小时在线：看 [Linux VPS 通用部署](./deploy/03-linux-vps-baseline.md)
+- 想配置多个长期 Agent：看 [如何创建多个 OpenClaw Agent](./deploy/04-create-multi-agent.md)
 
 ### 推荐渠道入口
 
@@ -67,10 +68,10 @@
 
 ## 部署与运行建议
 
-- [部署与安装中心](./deploy/README.md)
+- [部署与配置中心](./deploy/README.md)
 - [安装与部署入口（小白版）](./resources/01-install-and-deploy.md)
 - [模型、渠道、技能怎么选](./resources/02-model-channel-skill-guide.md)
-- [如何创建多个 OpenClaw Agent](./resources/05-create-multi-agent.md)
+- [如何创建多个 OpenClaw Agent](./deploy/04-create-multi-agent.md)
 - [低成本稳定运行（精简版）](./playbooks/01-low-cost-stable-run.md)
 - [安全与权限边界（非技术版）](./playbooks/02-safe-usage-boundary.md)
 

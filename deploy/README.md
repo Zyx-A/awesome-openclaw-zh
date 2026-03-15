@@ -1,11 +1,12 @@
-# 部署与安装中心
+# 部署与配置中心
 
 如果你还没有装好 OpenClaw，请先从这里开始。
 
-本目录只解决两件事：
+本目录现在主要解决三件事：
 
 - 把 OpenClaw 装起来
 - 把 Gateway 跑起来并能在浏览器里验证成功
+- 补最常用的配置技巧，例如多 Agent
 
 渠道接入（飞书、钉钉、企业微信、QQ）后续单独放到 `channels/`。
 
@@ -14,12 +15,14 @@
 - 有 Mac：看 [macOS 本地部署](./01-macos-local.md)
 - 用 Windows：看 [Windows 部署（WSL2 主线）](./02-windows.md)
 - 想 24 小时在线：看 [Linux VPS 通用部署](./03-linux-vps-baseline.md)
+- 想配置多个长期 Agent：看 [如何创建多个 OpenClaw Agent](./04-create-multi-agent.md)
 
 ## 这几篇文档的关系
 
 - `01-macos-local.md`：适合个人本地使用，体验最好。
 - `02-windows.md`：以 WSL2 + Ubuntu 为主线，兼容性更稳。
 - `03-linux-vps-baseline.md`：先把“通用 Linux 基线”讲清楚，后续再补阿里云 / 腾讯云 / 火山引擎差异篇。
+- `04-create-multi-agent.md`：适合已经部署完成，准备做多 Agent 配置和多入口路由。
 
 ## 完成部署后的下一步
 

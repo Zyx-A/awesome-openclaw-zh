@@ -4,7 +4,7 @@
 
 如果你还没部署，请先看：
 
-- [部署与安装中心](../deploy/README.md)
+- [部署与配置中心](../deploy/README.md)
 - [安装与部署入口（小白版）](../resources/01-install-and-deploy.md)
 
 ## 1) 先确认 Gateway 已经正常运行
